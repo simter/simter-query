@@ -100,9 +100,10 @@ Examples :
 fun example() {
   // string data
   val conditionsString = """[
-    ["k", "2018-01-10", "date", "="],
-    ["k", "[3]", "int[]", "()"],
-    ["k", "[6, 9]", "int[]", "()"]
+    ["k", "2018-01-10", "date", "="], // parse to conditions[0]
+    ["k", "[3]", "int[]", "()"],      // parse to conditions[1]
+    ["k", "[, 6]", "int[]", "()"],    // parse to conditions[2]
+    ["k", "[1, 2]", "int[]", "()"]    // parse to conditions[3] and conditions[4]
   ]""".trimIndent()
 
   // parse
@@ -112,8 +113,9 @@ fun example() {
   assertEquals(4, conditions.size)
   assertEquals(EqualsCondition(name = "k", value = LocalDate.of(2018, 1, 10)), conditions[0])
   assertEquals(GreaterThanCondition(name = "k", value = 3), conditions[1])
-  assertEquals(GreaterThanCondition(name = "k", value = 6), conditions[2])
-  assertEquals(LessThanCondition(name = "k", value = 9), conditions[3])
+  assertEquals(LessThanCondition(name = "k", value = 6), conditions[2])
+  assertEquals(GreaterThanCondition(name = "k", value = 1), conditions[3])
+  assertEquals(LessThanCondition(name = "k", value = 2), conditions[4])
 }
 ```
 
