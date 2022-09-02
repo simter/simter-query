@@ -1,5 +1,9 @@
 # simter-query changelog
 
+## 3.1.0 - 2022-09-02
+
+- Add FuzzyQuery feature
+
 ## 3.0.0 - 2022-06-21
 
 - Upgrade to simter-dependencies-3.0.0 (jdk-17)
