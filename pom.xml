@@ -4,11 +4,11 @@
   <parent>
     <groupId>tech.simter</groupId>
     <artifactId>simter-dependencies</artifactId>
-    <version>3.0.0</version>
+    <version>3.1.0</version>
     <relativePath/>
   </parent>
   <artifactId>simter-query</artifactId>
-  <version>3.0.0</version>
+  <version>3.1.0</version>
   <packaging>jar</packaging>
   <name>simter-query</name>
   <description>Simter query tools</description>
