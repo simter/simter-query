@@ -19,6 +19,7 @@ import javax.json.JsonValue
  *
  * @author RJ
  */
+@Deprecated(message = "Use tech.simter.query.Query.kt functions instead")
 object ConditionUtils {
   // use spring ConversionService to convert string value
   private val conversionService = DefaultConversionService()
@@ -181,7 +182,7 @@ object ConditionUtils {
   /**
    * Parse multiple [Condition] string with structure '[[name, stringValue, valueType, symbol], ...]' to a [Condition] list.
    *
-   * Each [Condition] string must has a standard [JsonArray] string format.
+   * Each [Condition] string must have a standard [JsonArray] string format.
    *
    * Default [Condition] structure:
    *

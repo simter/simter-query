@@ -5,6 +5,7 @@ package tech.simter.query.condition
  *
  * @author RJ
  */
+@Deprecated(message = "Use tech.simter.query.Query.kt functions instead")
 interface Condition<V> {
   val name: String
   val type: Type
