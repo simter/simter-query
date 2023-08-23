@@ -1,5 +1,12 @@
 # simter-query changelog
 
+## 3.2.0 - 2023-08-23
+
+- Add new Query feature to instead of FuzzyQuery
+  > Breaking change.
+- Delete tech.simter.query.condition package
+  > Just keep FuzzyQuery for compile compatibility. Will delete in next release.
+
 ## 3.1.0 - 2022-09-02
 
 - Add FuzzyQuery feature
