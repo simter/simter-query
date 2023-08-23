@@ -3,6 +3,7 @@ package tech.simter.query
 /**
  * 模糊查询封装。
  */
+@Deprecated(message = "Use tech.simter.query.Query.kt functions instead")
 data class FuzzyQuery(
   /** 模糊查询语句 */
   val sql: String,
