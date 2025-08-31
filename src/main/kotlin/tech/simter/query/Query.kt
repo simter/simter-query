@@ -390,7 +390,9 @@ fun toConditions(conditionsString: String): List<Condition> {
         Condition(
           id = it.getString(0),
           operator = Operator.of(symbol),
-          value = parseMultipleValue(value.mapIndexed { i, _ -> value.getString(i) }, valueType),
+          value = parseMultipleValue(value.mapIndexed { i, _ ->
+            if (value[i].valueType != NULL) value.getString(i) else ""
+          }, valueType),
         )
       } else { // single value
         Condition(
