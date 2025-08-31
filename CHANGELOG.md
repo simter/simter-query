@@ -1,5 +1,9 @@
 # simter-query changelog
 
+## 3.2.1 - 2025-08-31
+
+- Fixed JsonNull could not cast to JsonString
+
 ## 3.2.0 - 2023-08-23
 
 - Add new Query feature to instead of FuzzyQuery
